@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Mcma.Api" Version="0.14.0-rc32" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Mcma.Modules.JobProcessor.Common\Mcma.Modules.JobProcessor.Common.csproj" />
+    </ItemGroup>
+
+</Project>

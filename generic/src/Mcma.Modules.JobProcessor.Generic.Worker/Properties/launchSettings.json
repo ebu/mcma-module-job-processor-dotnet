@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "Mcma.Modules.JobProcessor.Generic.Worker": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
