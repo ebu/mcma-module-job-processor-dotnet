@@ -5,7 +5,7 @@
   </PropertyGroup>  
   <ItemGroup>
     <PackageReference Include="AWSSDK.CloudWatchEvents" Version="3.5.1.5" />
-    <PackageReference Include="Mcma.Aws.DynamoDb" Version="0.14.0-rc32" />
+    <PackageReference Include="Mcma.Aws.DynamoDb" Version="0.14.0" />
   </ItemGroup>  
   <ItemGroup>
     <ProjectReference Include="..\..\..\common\Mcma.Modules.JobProcessor.Common\Mcma.Modules.JobProcessor.Common.csproj" />

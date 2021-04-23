@@ -1,5 +1,7 @@
 ﻿using System;
 using Hangfire;
+using Hangfire.Logging;
+using Hangfire.Logging.LogProviders;
 using Hangfire.Mongo;
 using Hangfire.Mongo.Migration.Strategies;
 using Mcma.Client;
@@ -40,11 +42,13 @@ namespace Mcma.Modules.JobProcessor.Generic.Worker
                         config.SetDataCompatibilityLevel(CompatibilityLevel.Version_170);
                         config.UseSimpleAssemblyNameTypeSerializer();
                         config.UseRecommendedSerializerSettings();
+                        config.UseFilter(new AutomaticRetryAttribute { Attempts = 0 });
                         config.UseMongoStorage(configuration.GetConnectionString("Hangfire"),
                                                new MongoStorageOptions
                                                {
-                                                   QueuePollInterval = TimeSpan.FromSeconds(1),
-                                                   MigrationOptions = new MongoMigrationOptions { MigrationStrategy = new DropMongoMigrationStrategy() }
+                                                   QueuePollInterval = mcmaConfig.GetValue("QueuePollInterval", TimeSpan.FromSeconds(3)),
+                                                   MigrationOptions = new MongoMigrationOptions { MigrationStrategy = new DropMongoMigrationStrategy() },
+                                                   UseNotificationsCollection = false
                                                });
                     })
                     .AddHangfireServer(opts => opts.Queues = new[] { mcmaConfig["ServiceName"] });
