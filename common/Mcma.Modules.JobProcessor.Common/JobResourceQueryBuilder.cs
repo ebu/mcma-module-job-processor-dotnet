@@ -1,5 +1,4 @@
-﻿using Mcma.Data.DocumentDatabase.Queries;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Mcma.Data.DocumentDatabase.Queries.Custom;
 
 namespace Mcma.Modules.JobProcessor.Common
 {

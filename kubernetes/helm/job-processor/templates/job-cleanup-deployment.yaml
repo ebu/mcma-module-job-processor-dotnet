@@ -1,0 +1,4 @@
+{{ $function := "periodic-job-cleanup" }}
+{{ $functionConfig := .Values.jobCleanup }}
+{{ $data := dict "serviceName" .Values.serviceName "serviceFunction" $function "functionConfig" $functionConfig "version" .Values.version }}
+{{- template "mcma.deployment" $data }}

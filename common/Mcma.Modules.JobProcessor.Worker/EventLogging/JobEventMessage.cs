@@ -1,4 +1,6 @@
 ﻿using System;
+using Mcma.Model;
+using Mcma.Model.Jobs;
 
 namespace Mcma.Modules.JobProcessor.Worker.EventLogging
 {

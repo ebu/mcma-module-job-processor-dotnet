@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Mcma.Client;
+using Mcma.Client.Resources;
 using Mcma.Logging;
+using Mcma.Model;
+using Mcma.Model.Jobs;
 
 namespace Mcma.Modules.JobProcessor.Worker.EventLogging
 {

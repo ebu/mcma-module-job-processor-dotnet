@@ -1,0 +1,28 @@
+{
+  "files": [
+    "**/*.tf",
+    "dashboard.json"
+  ],
+  "functions": [
+    {
+      "name": "ApiHandler",
+      "type": "AwsLambdaFunction",
+      "path": "src/Mcma.Modules.JobProcessor.Aws.ApiHandler"
+    },
+    {
+      "name": "Worker",
+      "type": "AwsLambdaFunction",
+      "path": "src/Mcma.Modules.JobProcessor.Aws.Worker"
+    },
+    {
+      "name": "PeriodicJobChecker",
+      "type": "AwsLambdaFunction",
+      "path": "src/Mcma.Modules.JobProcessor.Aws.PeriodicJobChecker"
+    },
+    {
+      "name": "PeriodicJobCleanup",
+      "type": "AwsLambdaFunction",
+      "path": "src/Mcma.Modules.JobProcessor.Aws.PeriodicJobCleanup"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Version>0.3.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Mcma.Logging.Serilog" Version="0.15.0" />
+    <PackageReference Include="Mcma.Storage.LocalFileSystem" Version="0.15.0" />
+    <PackageReference Include="Mcma.Worker.Kafka" Version="0.15.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.13" />
+    <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\common\Mcma.Modules.JobProcessor.Worker\Mcma.Modules.JobProcessor.Worker.csproj" />
+    <ProjectReference Include="..\Mcma.Modules.JobProcessor.Kubernetes.Common\Mcma.Modules.JobProcessor.Kubernetes.Common.csproj" />
+  </ItemGroup>
+</Project>

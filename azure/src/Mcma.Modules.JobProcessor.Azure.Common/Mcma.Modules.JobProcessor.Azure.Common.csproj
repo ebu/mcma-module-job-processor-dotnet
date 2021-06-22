@@ -1,18 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
-    <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
-        <RootNamespace>Mcma.Modules.JobProcessor.Azure.Common</RootNamespace>
-    </PropertyGroup>
-
-    <ItemGroup>
-      <PackageReference Include="Mcma.Azure.CosmosDb" Version="0.14.0" />
-      <PackageReference Include="Microsoft.Azure.Management.Logic" Version="4.1.0" />
-      <PackageReference Include="Microsoft.Azure.Management.ResourceManager.Fluent" Version="1.34.0" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\..\..\common\Mcma.Modules.JobProcessor.Common\Mcma.Modules.JobProcessor.Common.csproj" />
-    </ItemGroup>
-
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Mcma.Modules.JobProcessor.Azure.Common</RootNamespace>
+    <Version>0.3.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Mcma.Data.Azure.CosmosDb" Version="0.15.0" />
+    <PackageReference Include="Microsoft.Azure.Management.Logic" Version="4.1.0" />
+    <PackageReference Include="Microsoft.Azure.Management.ResourceManager.Fluent" Version="1.34.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\common\Mcma.Modules.JobProcessor.Common\Mcma.Modules.JobProcessor.Common.csproj" />
+  </ItemGroup>
 </Project>

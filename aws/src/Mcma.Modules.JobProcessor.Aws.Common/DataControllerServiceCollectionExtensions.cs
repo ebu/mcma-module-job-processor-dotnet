@@ -1,5 +1,6 @@
 ﻿using Amazon.DynamoDBv2.DocumentModel;
-using Mcma.Aws.DynamoDb;
+using Mcma.Data.Aws.DynamoDb;
+using Mcma.Model;
 using Mcma.Modules.JobProcessor.Common;
 using Microsoft.Extensions.DependencyInjection;
 

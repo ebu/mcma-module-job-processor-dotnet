@@ -1,8 +1,8 @@
-﻿using Mcma.Modules.JobProcessor.Azure.Common;
+﻿using Mcma.Logging.Azure.ApplicationInsights;
+using Mcma.Modules.JobProcessor.Azure.Common;
 using Mcma.Modules.JobProcessor.Azure.PeriodicJobChecker;
-using Mcma.Azure.Logger;
-using Mcma.Azure.WorkerInvoker;
 using Mcma.Modules.JobProcessor.PeriodicJobChecker;
+using Mcma.WorkerInvoker.Azure.QueueStorage;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 
 [assembly: FunctionsStartup(typeof(Startup))]

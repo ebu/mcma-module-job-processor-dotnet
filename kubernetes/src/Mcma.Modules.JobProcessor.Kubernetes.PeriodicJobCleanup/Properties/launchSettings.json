@@ -1,0 +1,23 @@
+﻿{
+  "profiles": {
+    "Mcma.Modules.JobProcessor.Kubernetes.JobCleanup": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development",
+
+        "MCMA_LOGGER_SOURCE": "job-processor-job-checker",
+        "MCMA_SERVICE_NAME": "job-processor",
+        "MCMA_PUBLIC_URL": "http://localhost:36362/mcma/api",
+        "MCMA_SERVICES_URL": "http://localhost:36361/mcma/api/services",
+        "MCMA_KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+        "MCMA_KAFKA_JOB_STATE_TOPIC": "JobProcessor.CronJobs.State",
+        "MCMA_KAFKA_WORKER_TOPIC": "JobProcessor.Worker",
+        "MCMA_JOB_RETENTION_PERIOD_IN_DAYS": "1",
+        "MCMA_MONGODB_CONNECTION_STRING": "mongodb://localhost:27017",
+        "MCMA_MONGODB_DATABASE_NAME": "mcma",
+        "MCMA_MONGODB_COLLECTION_NAME": "job-processor"
+      }
+    }
+  }
+}

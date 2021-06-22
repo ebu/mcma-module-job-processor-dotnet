@@ -1,4 +1,4 @@
-﻿using Mcma.Azure.Functions.Worker;
+﻿using Mcma.Functions.Azure.Worker;
 using Mcma.Modules.JobProcessor.Azure.Common;
 using Mcma.Modules.JobProcessor.Azure.Worker;
 using Mcma.Modules.JobProcessor.Common;

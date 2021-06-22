@@ -1,13 +1,13 @@
 using Amazon.Lambda.APIGatewayEvents;
 using Amazon.Lambda.Core;
-using Mcma.Aws.Client;
-using Mcma.Aws.Functions;
-using Mcma.Aws.Functions.ApiHandler;
 using Mcma.Modules.JobProcessor.Aws.Common;
-using Mcma.Aws.Lambda;
-using Mcma.Aws.WorkerInvoker;
 using Mcma.Client;
+using Mcma.Client.Aws;
+using Mcma.Functions.Aws;
+using Mcma.Functions.Aws.ApiHandler;
 using Mcma.Modules.JobProcessor.ApiHandler;
+using Mcma.Serialization.Aws;
+using Mcma.WorkerInvoker.Aws.Lambda;
 using Microsoft.Extensions.DependencyInjection;
 
 [assembly: LambdaSerializer(typeof(McmaLambdaSerializer))]

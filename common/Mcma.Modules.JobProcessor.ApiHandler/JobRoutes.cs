@@ -2,9 +2,11 @@
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Mcma.Api;
-using Mcma.Api.Routes;
-using Mcma.Client;
+using Mcma.Api.Http;
+using Mcma.Api.Routing;
+using Mcma.Client.Resources;
+using Mcma.Model;
+using Mcma.Model.Jobs;
 using Mcma.Modules.JobProcessor.Common;
 using Mcma.WorkerInvoker;
 using Microsoft.Extensions.Options;

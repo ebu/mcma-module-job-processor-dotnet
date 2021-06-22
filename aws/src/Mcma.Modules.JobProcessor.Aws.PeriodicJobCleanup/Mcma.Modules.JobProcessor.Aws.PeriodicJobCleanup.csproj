@@ -6,11 +6,12 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <Version>0.3.0</Version>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Mcma.Aws.Functions" Version="0.14.0" />
-    <PackageReference Include="Mcma.Aws.Logger" Version="0.14.0" />
-    <PackageReference Include="Mcma.Aws.LambdaWorkerInvoker" Version="0.14.0" />
+    <PackageReference Include="Mcma.Functions.Aws" Version="0.15.0" />
+    <PackageReference Include="Mcma.Logging.Aws.CloudWatch" Version="0.15.0" />
+    <PackageReference Include="Mcma.WorkerInvoker.Aws.Lambda" Version="0.15.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\common\Mcma.Modules.JobProcessor.PeriodicJobCleanup\Mcma.Modules.JobProcessor.PeriodicJobCleanup.csproj" />

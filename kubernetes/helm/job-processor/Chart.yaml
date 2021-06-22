@@ -1,0 +1,6 @@
+apiVersion: v2
+name: job-processor
+description: A Helm chart for deploying an MCMA Job Processor to Kubernetes
+type: application
+version: 0.2.0
+appVersion: "@@Version@@"

@@ -1,0 +1,30 @@
+namespace: default
+serviceName: job-processor
+servicesUrl: "http://service-registry/mcma/api/services"
+version: "@@Version@@"
+mongoDb:
+  connectionString: "mongodb://mongo1,mongo2"
+  databaseName: "mcma"
+  collectionName: "job-processor"
+kafka:
+  bootstrapServers: "kafka1,kafka2"
+  workerTopic: "mcma.jobprocessor.worker"
+  cronJobStateTopic: "mcma.jobprocessor.cronjobs.state"
+  cronJobExecutionTopicPrefix: "mcma.jobprocessor.cronjobs.execution"
+apiHandler:
+  dockerImageId: "evanverneyfink/mcma-job-processor-api"
+  numReplicas: 1
+worker:
+  dockerImageId: "evanverneyfink/mcma-job-processor-worker"
+  numReplicas: 1
+cronJobs:
+  dockerImageId: "evanverneyfink/mcma-job-processor-cron-jobs"
+  numReplicas: 1
+jobChecker:
+  dockerImageId: "evanverneyfink/mcma-job-processor-job-checker"
+  numReplicas: 1
+jobCleanup:
+  dockerImageId: "evanverneyfink/mcma-job-processor-job-cleanup"
+  numReplicas: 1
+defaultJobTimeoutInMinutes: 60
+jobRetentionPeriodInDays: 90

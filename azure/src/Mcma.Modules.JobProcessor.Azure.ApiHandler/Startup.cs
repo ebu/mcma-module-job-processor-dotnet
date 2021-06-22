@@ -1,10 +1,10 @@
-﻿using Mcma.Azure.Client.AzureAD.ManagedIdentity;
-using Mcma.Azure.Functions.ApiHandler;
-using Mcma.Modules.JobProcessor.Azure.ApiHandler;
+﻿using Mcma.Modules.JobProcessor.Azure.ApiHandler;
 using Mcma.Modules.JobProcessor.Azure.Common;
-using Mcma.Azure.WorkerInvoker;
 using Mcma.Client;
+using Mcma.Client.Azure.AzureAD.ManagedIdentity;
+using Mcma.Functions.Azure.ApiHandler;
 using Mcma.Modules.JobProcessor.ApiHandler;
+using Mcma.WorkerInvoker.Azure.QueueStorage;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 
 [assembly: FunctionsStartup(typeof(Startup))]

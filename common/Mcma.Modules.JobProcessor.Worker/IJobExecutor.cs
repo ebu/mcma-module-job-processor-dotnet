@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Mcma.Model.Jobs;
 using Mcma.Modules.JobProcessor.Worker.Requests;
 using Mcma.Worker;
 

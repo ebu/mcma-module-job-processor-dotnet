@@ -6,17 +6,11 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <Version>0.3.0</Version>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Mcma.Aws.ApiGateway" Version="0.14.0" />
-    <PackageReference Include="Mcma.Aws.Client" Version="0.14.0" />
-    <PackageReference Include="Mcma.Aws.DynamoDb" Version="0.14.0" />
-    <PackageReference Include="Mcma.Aws.Functions" Version="0.14.0" />
-    <PackageReference Include="Mcma.Aws.Functions.ApiHandler" Version="0.14.0" />
-    <PackageReference Include="Mcma.Aws.LambdaWorkerInvoker" Version="0.14.0" />
-    <PackageReference Include="Mcma.Aws.Logger" Version="0.14.0" />
-    <PackageReference Include="Mcma.Aws.S3" Version="0.14.0" />
-    <PackageReference Include="Mcma.Aws.Serialization" Version="0.14.0" />
+    <PackageReference Include="Mcma.Client.Aws" Version="0.15.0" />
+    <PackageReference Include="Mcma.Functions.Aws.ApiHandler" Version="0.15.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\common\Mcma.Modules.JobProcessor.ApiHandler\Mcma.Modules.JobProcessor.ApiHandler.csproj" />

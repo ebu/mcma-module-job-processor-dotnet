@@ -5,10 +5,11 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <RootNamespace>Mcma.Modules.JobProcessor.Azure.PeriodicJobChecker</RootNamespace>
+    <Version>0.3.0</Version>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Mcma.Azure.Logger" Version="0.14.0" />
-    <PackageReference Include="Mcma.Azure.QueueWorkerInvoker" Version="0.14.0" />
+    <PackageReference Include="Mcma.Logging.Azure.ApplicationInsights" Version="0.15.0" />
+    <PackageReference Include="Mcma.WorkerInvoker.Azure.QueueStorage" Version="0.15.0" />
     <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.1.0" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.9" />
   </ItemGroup>

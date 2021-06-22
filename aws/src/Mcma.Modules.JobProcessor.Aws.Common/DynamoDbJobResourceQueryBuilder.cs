@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Amazon.DynamoDBv2.DocumentModel;
-using Mcma.Data.DocumentDatabase.Queries;
+using Mcma.Data.DocumentDatabase.Queries.Custom;
 using Mcma.Modules.JobProcessor.Common;
 
 namespace Mcma.Modules.JobProcessor.Aws.Common

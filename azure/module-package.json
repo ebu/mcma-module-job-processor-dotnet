@@ -1,0 +1,27 @@
+{
+  "files": [
+    "**/*.tf"
+  ],
+  "functions": [
+    {
+      "name": "ApiHandler",
+      "type": "AzureFunctionApp",
+      "path": "src/Mcma.Modules.JobProcessor.Azure.ApiHandler"
+    },
+    {
+      "name": "Worker",
+      "type": "AzureFunctionApp",
+      "path": "src/Mcma.Modules.JobProcessor.Azure.Worker"
+    },
+    {
+      "name": "PeriodicJobChecker",
+      "type": "AzureFunctionApp",
+      "path": "src/Mcma.Modules.JobProcessor.Azure.PeriodicJobChecker"
+    },
+    {
+      "name": "PeriodicJobCleanup",
+      "type": "AzureFunctionApp",
+      "path": "src/Mcma.Modules.JobProcessor.Azure.PeriodicJobCleanup"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 ﻿using System;
-using Mcma.Api;
+using Mcma.Api.Http;
+using Mcma.Model;
 using Mcma.Modules.JobProcessor.Common;
 
 namespace Mcma.Modules.JobProcessor.ApiHandler

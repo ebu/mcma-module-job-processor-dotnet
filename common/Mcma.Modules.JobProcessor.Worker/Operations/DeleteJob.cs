@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Mcma.Client;
+using Mcma.Client.Resources;
+using Mcma.Model;
 using Mcma.Modules.JobProcessor.Common;
 using Mcma.Modules.JobProcessor.Worker.Requests;
 using Mcma.Worker;

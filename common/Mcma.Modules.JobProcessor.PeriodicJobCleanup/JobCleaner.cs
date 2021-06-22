@@ -2,6 +2,8 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Mcma.Logging;
+using Mcma.Model;
+using Mcma.Model.Jobs;
 using Mcma.Modules.JobProcessor.Common;
 using Mcma.WorkerInvoker;
 using Microsoft.Extensions.Options;

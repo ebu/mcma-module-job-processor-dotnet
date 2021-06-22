@@ -1,13 +1,12 @@
 using Amazon.Lambda.Core;
-using Mcma.Aws.Client;
-using Mcma.Aws.Functions;
-using Mcma.Aws.Functions.ApiHandler;
-using Mcma.Aws.Functions.Worker;
 using Mcma.Modules.JobProcessor.Aws.Common;
-using Mcma.Aws.Lambda;
 using Mcma.Client;
+using Mcma.Client.Aws;
+using Mcma.Functions.Aws;
+using Mcma.Functions.Aws.Worker;
 using Mcma.Modules.JobProcessor.Common;
 using Mcma.Modules.JobProcessor.Worker;
+using Mcma.Serialization.Aws;
 using Mcma.Worker.Common;
 using Microsoft.Extensions.DependencyInjection;
 

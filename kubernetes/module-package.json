@@ -1,0 +1,48 @@
+{
+  "files": [
+    "**/*.tf",
+    "helm/**/*.*"
+  ],
+  "functions": [
+    {
+      "name": "ApiHandler",
+      "type": "DockerImage",
+      "path": "src/Mcma.Modules.JobProcessor.Kubernetes.ApiHandler",
+      "properties": {
+        "dockerImageId": "evanverneyfink/mcma-job-processor-api"
+      }
+    },
+    {
+      "name": "Worker",
+      "type": "DockerImage",
+      "path": "src/Mcma.Modules.JobProcessor.Kubernetes.Worker",
+      "properties": {
+        "dockerImageId": "evanverneyfink/mcma-job-processor-worker"
+      }
+    },
+    {
+      "name": "CronJobs",
+      "type": "DockerImage",
+      "path": "src/Mcma.Modules.JobProcessor.Kubernetes.CronJobs",
+      "properties": {
+        "dockerImageId": "evanverneyfink/mcma-job-processor-cron-jobs"
+      }
+    },
+    {
+      "name": "PeriodicJobChecker",
+      "type": "DockerImage",
+      "path": "src/Mcma.Modules.JobProcessor.Kubernetes.PeriodicJobChecker",
+      "properties": {
+        "dockerImageId": "evanverneyfink/mcma-job-processor-job-checker"
+      }
+    },
+    {
+      "name": "PeriodicJobCleanup",
+      "type": "DockerImage",
+      "path": "src/Mcma.Modules.JobProcessor.Kubernetes.PeriodicJobCleanup",
+      "properties": {
+        "dockerImageId": "evanverneyfink/mcma-job-processor-job-cleanup"
+      }
+    }
+  ]
+}

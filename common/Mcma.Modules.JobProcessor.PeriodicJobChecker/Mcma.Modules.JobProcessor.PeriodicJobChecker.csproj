@@ -5,8 +5,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Mcma.Core" Version="0.14.0" />
-      <PackageReference Include="Mcma.WorkerInvoker" Version="0.14.0" />
+      <PackageReference Include="Mcma.WorkerInvoker" Version="0.14.2-alpha23" />
     </ItemGroup>
 
     <ItemGroup>

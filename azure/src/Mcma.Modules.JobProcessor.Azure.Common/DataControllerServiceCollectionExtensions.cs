@@ -1,4 +1,4 @@
-﻿using Mcma.Azure.CosmosDb;
+﻿using Mcma.Data.Azure.CosmosDb;
 using Mcma.Modules.JobProcessor.Common;
 using Microsoft.Extensions.DependencyInjection;
 

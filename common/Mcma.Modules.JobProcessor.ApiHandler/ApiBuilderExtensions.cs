@@ -1,4 +1,4 @@
-﻿using Mcma.Api;
+﻿using Mcma.Api.Http;
 
 namespace Mcma.Modules.JobProcessor.ApiHandler
 {

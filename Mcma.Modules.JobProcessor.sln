@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "generic", "generic", "{037DCD35-F4C0-4E48-B365-8D71713270C0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kubernetes", "kubernetes", "{037DCD35-F4C0-4E48-B365-8D71713270C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mcma.Modules.JobProcessor.Generic.ApiHandler", "generic\src\Mcma.Modules.JobProcessor.Generic.ApiHandler\Mcma.Modules.JobProcessor.Generic.ApiHandler.csproj", "{6BCC543F-50F3-4D2B-B654-0B9558EA96CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mcma.Modules.JobProcessor.Kubernetes.ApiHandler", "kubernetes\src\Mcma.Modules.JobProcessor.Kubernetes.ApiHandler\Mcma.Modules.JobProcessor.Kubernetes.ApiHandler.csproj", "{6BCC543F-50F3-4D2B-B654-0B9558EA96CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mcma.Modules.JobProcessor.Generic.Common", "generic\src\Mcma.Modules.JobProcessor.Generic.Common\Mcma.Modules.JobProcessor.Generic.Common.csproj", "{338C3201-0566-4E4F-8FA4-D766ECECCCD1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mcma.Modules.JobProcessor.Kubernetes.Common", "kubernetes\src\Mcma.Modules.JobProcessor.Kubernetes.Common\Mcma.Modules.JobProcessor.Kubernetes.Common.csproj", "{338C3201-0566-4E4F-8FA4-D766ECECCCD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mcma.Modules.JobProcessor.Generic.Worker", "generic\src\Mcma.Modules.JobProcessor.Generic.Worker\Mcma.Modules.JobProcessor.Generic.Worker.csproj", "{58D39DCF-5F4C-4792-8B57-AF91C9C90A62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mcma.Modules.JobProcessor.Kubernetes.Worker", "kubernetes\src\Mcma.Modules.JobProcessor.Kubernetes.Worker\Mcma.Modules.JobProcessor.Kubernetes.Worker.csproj", "{58D39DCF-5F4C-4792-8B57-AF91C9C90A62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mcma.Modules.JobProcessor.Kubernetes.PeriodicJobChecker", "kubernetes\src\Mcma.Modules.JobProcessor.Kubernetes.PeriodicJobChecker\Mcma.Modules.JobProcessor.Kubernetes.PeriodicJobChecker.csproj", "{4233F8AF-5FA2-4B21-BB7C-EA3B34D2DB0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mcma.Modules.JobProcessor.Kubernetes.CronJobs", "kubernetes\src\Mcma.Modules.JobProcessor.Kubernetes.CronJobs\Mcma.Modules.JobProcessor.Kubernetes.CronJobs.csproj", "{FAE0C3D4-61AD-4A51-981E-56D720678530}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mcma.Modules.JobProcessor.Kubernetes.PeriodicJobCleanup", "kubernetes\src\Mcma.Modules.JobProcessor.Kubernetes.PeriodicJobCleanup\Mcma.Modules.JobProcessor.Kubernetes.PeriodicJobCleanup.csproj", "{039123D1-06BE-4B5E-9509-E53583890A51}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aws", "aws", "{C064FC95-AF0C-4BA6-9E0C-D122713D4C62}"
 EndProject
@@ -276,6 +282,42 @@ Global
 		{338C3201-0566-4E4F-8FA4-D766ECECCCD1}.Release|x64.Build.0 = Release|Any CPU
 		{338C3201-0566-4E4F-8FA4-D766ECECCCD1}.Release|x86.ActiveCfg = Release|Any CPU
 		{338C3201-0566-4E4F-8FA4-D766ECECCCD1}.Release|x86.Build.0 = Release|Any CPU
+		{4233F8AF-5FA2-4B21-BB7C-EA3B34D2DB0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4233F8AF-5FA2-4B21-BB7C-EA3B34D2DB0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4233F8AF-5FA2-4B21-BB7C-EA3B34D2DB0C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4233F8AF-5FA2-4B21-BB7C-EA3B34D2DB0C}.Debug|x64.Build.0 = Debug|Any CPU
+		{4233F8AF-5FA2-4B21-BB7C-EA3B34D2DB0C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4233F8AF-5FA2-4B21-BB7C-EA3B34D2DB0C}.Debug|x86.Build.0 = Debug|Any CPU
+		{4233F8AF-5FA2-4B21-BB7C-EA3B34D2DB0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4233F8AF-5FA2-4B21-BB7C-EA3B34D2DB0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4233F8AF-5FA2-4B21-BB7C-EA3B34D2DB0C}.Release|x64.ActiveCfg = Release|Any CPU
+		{4233F8AF-5FA2-4B21-BB7C-EA3B34D2DB0C}.Release|x64.Build.0 = Release|Any CPU
+		{4233F8AF-5FA2-4B21-BB7C-EA3B34D2DB0C}.Release|x86.ActiveCfg = Release|Any CPU
+		{4233F8AF-5FA2-4B21-BB7C-EA3B34D2DB0C}.Release|x86.Build.0 = Release|Any CPU
+		{FAE0C3D4-61AD-4A51-981E-56D720678530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAE0C3D4-61AD-4A51-981E-56D720678530}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAE0C3D4-61AD-4A51-981E-56D720678530}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FAE0C3D4-61AD-4A51-981E-56D720678530}.Debug|x64.Build.0 = Debug|Any CPU
+		{FAE0C3D4-61AD-4A51-981E-56D720678530}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FAE0C3D4-61AD-4A51-981E-56D720678530}.Debug|x86.Build.0 = Debug|Any CPU
+		{FAE0C3D4-61AD-4A51-981E-56D720678530}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAE0C3D4-61AD-4A51-981E-56D720678530}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAE0C3D4-61AD-4A51-981E-56D720678530}.Release|x64.ActiveCfg = Release|Any CPU
+		{FAE0C3D4-61AD-4A51-981E-56D720678530}.Release|x64.Build.0 = Release|Any CPU
+		{FAE0C3D4-61AD-4A51-981E-56D720678530}.Release|x86.ActiveCfg = Release|Any CPU
+		{FAE0C3D4-61AD-4A51-981E-56D720678530}.Release|x86.Build.0 = Release|Any CPU
+		{039123D1-06BE-4B5E-9509-E53583890A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{039123D1-06BE-4B5E-9509-E53583890A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{039123D1-06BE-4B5E-9509-E53583890A51}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{039123D1-06BE-4B5E-9509-E53583890A51}.Debug|x64.Build.0 = Debug|Any CPU
+		{039123D1-06BE-4B5E-9509-E53583890A51}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{039123D1-06BE-4B5E-9509-E53583890A51}.Debug|x86.Build.0 = Debug|Any CPU
+		{039123D1-06BE-4B5E-9509-E53583890A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{039123D1-06BE-4B5E-9509-E53583890A51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{039123D1-06BE-4B5E-9509-E53583890A51}.Release|x64.ActiveCfg = Release|Any CPU
+		{039123D1-06BE-4B5E-9509-E53583890A51}.Release|x64.Build.0 = Release|Any CPU
+		{039123D1-06BE-4B5E-9509-E53583890A51}.Release|x86.ActiveCfg = Release|Any CPU
+		{039123D1-06BE-4B5E-9509-E53583890A51}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6BCC543F-50F3-4D2B-B654-0B9558EA96CC} = {037DCD35-F4C0-4E48-B365-8D71713270C0}
@@ -296,5 +338,8 @@ Global
 		{24E4C5E0-F320-44D4-A809-4D6C14055F9C} = {EEB250AF-D4C5-48BA-BEE7-BA5989D2B360}
 		{89A30DF3-6524-472E-9E97-1C42CDDC1B4C} = {EEB250AF-D4C5-48BA-BEE7-BA5989D2B360}
 		{338C3201-0566-4E4F-8FA4-D766ECECCCD1} = {037DCD35-F4C0-4E48-B365-8D71713270C0}
+		{4233F8AF-5FA2-4B21-BB7C-EA3B34D2DB0C} = {037DCD35-F4C0-4E48-B365-8D71713270C0}
+		{FAE0C3D4-61AD-4A51-981E-56D720678530} = {037DCD35-F4C0-4E48-B365-8D71713270C0}
+		{039123D1-06BE-4B5E-9509-E53583890A51} = {037DCD35-F4C0-4E48-B365-8D71713270C0}
 	EndGlobalSection
 EndGlobal

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Mcma.Data;
-using Mcma.Data.DocumentDatabase.Queries;
+using Mcma.Data.DocumentDatabase;
+using Mcma.Data.DocumentDatabase.Queries.Custom;
+using Mcma.Model;
+using Mcma.Model.Jobs;
 using Mcma.Modules.JobProcessor.Common;
 
 namespace Mcma.Modules.JobProcessor.Aws.Common

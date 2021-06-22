@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Amazon.Lambda.Core;
-using Mcma.Aws.Functions;
+using Mcma.Functions.Aws;
 using Mcma.Modules.JobProcessor.PeriodicJobChecker;
 
 namespace Mcma.Modules.JobProcessor.Aws.PeriodicJobChecker

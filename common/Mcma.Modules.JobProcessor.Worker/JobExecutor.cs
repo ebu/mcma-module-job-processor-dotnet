@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Mcma.Client;
+using Mcma.Client.Resources;
 using Mcma.Logging;
+using Mcma.Model;
+using Mcma.Model.Jobs;
 using Mcma.Modules.JobProcessor.Common;
 using Mcma.Modules.JobProcessor.Worker.EventLogging;
 using Mcma.Modules.JobProcessor.Worker.Requests;

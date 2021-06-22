@@ -1,4 +1,6 @@
-﻿namespace Mcma.Modules.JobProcessor.Worker.Requests
+﻿using Mcma.Model;
+
+namespace Mcma.Modules.JobProcessor.Worker.Requests
 {
     public class NotificationData
     {

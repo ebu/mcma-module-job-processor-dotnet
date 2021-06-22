@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "mcma-env-vars"
+data:
+  MCMA_LOGGER_SOURCE: {{ .Values.serviceName | quote }}
+  MCMA_PUBLIC_URL: "http://{{ .Values.serviceName }}/mcma/api"
+  MCMA_SERVICES_URL: {{ .Values.servicesUrl }}
+  MCMA_KAFKA_BOOTSTRAP_SERVERS: {{ .Values.kafka.bootstrapServers }}
+  MCMA_KAFKA_WORKER_TOPIC: {{ .Values.kafka.workerTopic }}
+  MCMA_KAFKA_CRON_JOB_STATE_TOPIC: {{ .Values.kafka.cronJobStateTopic }}
+  MCMA_KAFKA_CRON_JOB_EXECUTION_TOPIC_PREFIX: {{ .Values.kafka.cronJobExecutionTopicPrefix }}
+  MCMA_MONGODB_CONNECTION_STRING: {{ .Values.mongoDb.connectionString }}
+  MCMA_MONGODB_DATABASE_NAME: {{ .Values.mongoDb.databaseName }}
+  MCMA_MONGODB_COLLECTION_NAME: {{ .Values.mongoDb.collectionName }}
+  MCMA_JOB_RETENTION_PERIOD_IN_DAYS: {{ .Values.jobRetentionPeriodInDays }}
+  MCMA_DEFAULT_JOB_TIMEOUT_IN_MINUTES: {{ .Values.defaultJobTimeoutInMinutes }}

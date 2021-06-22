@@ -2,6 +2,8 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Mcma.Logging;
+using Mcma.Model;
+using Mcma.Model.Jobs;
 using Mcma.Modules.JobProcessor.Common;
 using Mcma.WorkerInvoker;
 using Microsoft.Extensions.Options;
@@ -11,10 +13,10 @@ namespace Mcma.Modules.JobProcessor.PeriodicJobChecker
     public class JobChecker : IJobChecker
     {
         public JobChecker(ILoggerProvider loggerProvider,
-                                              IDataController dataController,
-                                              IMcmaWorkerInvoker workerInvoker,
-                                              IJobCheckerTrigger checkerTrigger,
-                                              IOptions<JobCheckerOptions> options)
+                          IDataController dataController,
+                          IMcmaWorkerInvoker workerInvoker,
+                          IJobCheckerTrigger checkerTrigger,
+                          IOptions<JobCheckerOptions> options)
         {
             LoggerProvider = loggerProvider ?? throw new ArgumentNullException(nameof(loggerProvider));
             DataController = dataController ?? throw new ArgumentNullException(nameof(dataController));
@@ -24,16 +26,16 @@ namespace Mcma.Modules.JobProcessor.PeriodicJobChecker
         }
 
         private ILoggerProvider LoggerProvider { get; }
-        
+
         private IDataController DataController { get; }
 
         private IMcmaWorkerInvoker WorkerInvoker { get; }
-        
+
         private IJobCheckerTrigger CheckerTrigger { get; }
-        
+
         private JobCheckerOptions Options { get; }
-        
-        public  async Task CheckJobsAsync(string requestId)
+
+        public async Task CheckJobsAsync(string requestId)
         {
             var tracker = new McmaTracker
             {
@@ -42,14 +44,15 @@ namespace Mcma.Modules.JobProcessor.PeriodicJobChecker
             };
 
             var logger = LoggerProvider.Get(requestId, tracker);
+            logger.FunctionStart(requestId);
             try
             {
                 await CheckerTrigger.DisableAsync();
-                
-                var newJobs = await DataController.QueryJobsAsync(new JobResourceQueryParameters {Status = JobStatus.New});
-                var queuedJobs = await DataController.QueryJobsAsync(new JobResourceQueryParameters {Status = JobStatus.Queued});
-                var scheduledJobs = await DataController.QueryJobsAsync(new JobResourceQueryParameters {Status = JobStatus.Scheduled});
-                var runningJobs = await DataController.QueryJobsAsync(new JobResourceQueryParameters {Status = JobStatus.Running});
+
+                var newJobs = await DataController.QueryJobsAsync(new JobResourceQueryParameters { Status = JobStatus.New });
+                var queuedJobs = await DataController.QueryJobsAsync(new JobResourceQueryParameters { Status = JobStatus.Queued });
+                var scheduledJobs = await DataController.QueryJobsAsync(new JobResourceQueryParameters { Status = JobStatus.Scheduled });
+                var runningJobs = await DataController.QueryJobsAsync(new JobResourceQueryParameters { Status = JobStatus.Running });
 
                 var jobs = newJobs.Results.Concat(queuedJobs.Results).Concat(scheduledJobs.Results).Concat(runningJobs.Results).ToArray();
 

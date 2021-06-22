@@ -1,5 +1,7 @@
 ﻿using System.Threading.Tasks;
-using Mcma.Data;
+using Mcma.Data.DocumentDatabase;
+using Mcma.Model;
+using Mcma.Model.Jobs;
 
 namespace Mcma.Modules.JobProcessor.Common
 {

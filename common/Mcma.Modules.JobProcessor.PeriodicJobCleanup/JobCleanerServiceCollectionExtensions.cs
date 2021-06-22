@@ -5,7 +5,7 @@ namespace Mcma.Modules.JobProcessor.PeriodicJobCleanup
 {
     public static class JobCleanerServiceCollectionExtensions
     {
-        public static IServiceCollection AddJobCleaner(this IServiceCollection services, Action<JobCleanerOptions> configure = null)
+        public static IServiceCollection AddPeriodicJobCleaner(this IServiceCollection services, Action<JobCleanerOptions> configure = null)
         {
             if (configure != null)
                 services.Configure(configure);
